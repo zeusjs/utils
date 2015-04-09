@@ -307,8 +307,8 @@ module.exports = function ( grunt ) {
 
         grunt.registerTask( 'test', [
             'lint',
-            'jshint:test'
-            // 'karma'
+            'jshint:test',
+            'karma'
         ] );
 
         grunt.registerTask( 'docs', [
@@ -317,7 +317,7 @@ module.exports = function ( grunt ) {
 
         grunt.registerTask( 'build', [
             'lint',
-            // 'karma',
+            'karma',
             'clean',
             'sass',
             'autoprefixer',

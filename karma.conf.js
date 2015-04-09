@@ -12,21 +12,14 @@ module.exports = function ( config ) {
 
         // list of files / patterns to load in the browser
         files: [
-            'externs/libs/jquery.js',
             'externs/libs/angular.js',
             'externs/libs/angular-mocks.js',
-            'externs/libs/ui-bootstrap-tpls.js',
-            'externs/libs/d3.js',
-
-            'test/mock_templates_module.js',
 
             'src/js/index.js',
-            'src/js/*.js',
-            'src/html/*.html',
+            'src/js/**/*.js',
 
             'test/spec/**/*.js',
-            'test/mock_views/*.html',
-            'test/fixtures/**/*.json'
+            'test/mock_views/*.html'
 
         ],
 
