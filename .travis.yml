@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "0.10"
+  - '0.10'
 before_script:
   - npm install --quiet -g grunt-cli karma
   - npm install
@@ -9,4 +9,4 @@ after_success: ./publish.sh
 env:
   global:
     - GH_REF: github.com/zeusjs/utils.git
-    - secure: YVMS1sNKwddVBZ/DAKXynmSCbA1TwlmF8dQ80gYx6KDRxQEPGWpFqrSJEd5s3/YeeKWk03yQCYGTmqac5i1xTte3Bji2lTe9tv5c+qf4OXVDNE/t/yCdSJPJa/a25Jr1yMBvusPlmAWnooR0HOWK+rkhK3FR1NedWUSJNm79fww=
+    - secure: CwHzojD66Mgio220y39aLzEuZ/v4/evU/KBmDMb2S+pyck6zpZGsh/XHZTNw1zXw4DwAczwT+nli7xhy24t3FMtDE4zr1qRqxPPtxFkpLPI5NQX1P4YdJyUan1NX5iimiEeBEnT5QC+bzF9UjNE61ESwsMJi/v7Yqa58CWrtPCw=
