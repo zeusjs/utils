@@ -2,7 +2,7 @@
 
 /**
  *  @ngdoc filter
- *  @name zeus.utils:prettyNumber
+ *  @name zeus.utils.filter:prettyNumber
  *
  *  @description
  *  Converts large numbers to human readable strings
