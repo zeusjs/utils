@@ -14,7 +14,7 @@ describe( 'Filter: bytes', function () {
 
     it( 'should return 1KB for 1024 value"', function () {
         var num = 1024;
-        expect( bytes( num ) ).toBe( '1 KB' );
+        expect( bytes( num ) ).toBe( '1 kB' );
     } );
 
     it( 'should return same number with unit Bytes for value less than 1024"', function () {
@@ -32,14 +32,14 @@ describe( 'Filter: bytes', function () {
         expect( bytes( num ) ).toBe( '1 GB' );
     } );
 
-    it( 'should return 19.9KB for 20367 value"', function () {
+    it( 'should return 19.9 kB for 20367 value"', function () {
         var num = 20367;
-        expect( bytes( num ) ).toBe( '19.9 KB' );
+        expect( bytes( num ) ).toBe( '19.9 kB' );
     } );
 
     it( 'should return 19.89KB for 20367 value with precision as 2"', function () {
         var num = 20367;
-        expect( bytes( num, 2 ) ).toBe( '19.89 KB' );
+        expect( bytes( num, 2 ) ).toBe( '19.89 kB' );
     } );
 
 } );
