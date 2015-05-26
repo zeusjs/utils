@@ -216,34 +216,35 @@ angular.module( 'zeus.utils' )
 
 
     var CONVERSION_MULTIPLIER = 1024,
-        units = [ 'Bytes', 'KB', 'MB', 'GB', 'TB', 'PB' ],
         bytes;
 
     bytes = function ( num, precision ) {
-        var temp = num,
-            i, decimals, result;
 
         precision = precision || 1;
+        num = +num;
 
-        for ( i = 0; i < units.length; i++ ) {
-            if ( temp >= CONVERSION_MULTIPLIER ) {
-                decimals = temp % CONVERSION_MULTIPLIER;
-                temp = temp / CONVERSION_MULTIPLIER;
-            } else {
-                break;
-            }
+        if ( !angular.isNumber( num ) ) {
+            throw new TypeError( 'Expected a number' );
         }
 
+        var exponent, unit,
+            neg = num < 0,
+            units = [ 'Bytes', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB' ];
 
-        if ( decimals > 0 ) {
-            decimals = +( decimals / CONVERSION_MULTIPLIER ).toFixed( precision );
-            result = ( Math.floor( temp ) + decimals ) +
-                ' ' + units[ i ];
-        } else {
-            result = Math.round( temp ) + ' ' + units[ i ];
+        if ( neg ) {
+            num = -num;
         }
 
-        return result;
+        if ( num < 1 ) {
+            return ( neg ? '-' : '' ) + num + ' B';
+        }
+
+        exponent = Math.min( Math.floor( Math.log( num ) / Math.log( CONVERSION_MULTIPLIER ) ),
+                    units.length - 1 );
+        num = ( num / Math.pow( CONVERSION_MULTIPLIER, exponent ) ).toFixed( precision ) * 1;
+        unit = units[ exponent ];
+
+        return ( neg ? '-' : '' ) + num + ' ' + unit;
     };
 
     return bytes;
