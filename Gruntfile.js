@@ -50,6 +50,7 @@ module.exports = function ( grunt ) {
                         '.tmp',
                         'dist/*',
                         'docs',
+                        '.gen/*',
                         'publish_docs',
                         '!dist/.git*'
                     ]
@@ -264,6 +265,16 @@ module.exports = function ( grunt ) {
                 }
             },
 
+            coveralls: {
+                options: {
+                    debug: false,
+                    coverageDir: '.gen/coverage',
+                    dryRun: false,
+                    force: true,
+                    recursive: true
+                }
+            },
+
 
             connect: {
                 options: {
@@ -316,9 +327,8 @@ module.exports = function ( grunt ) {
         ] );
 
         grunt.registerTask( 'build', [
-            'lint',
-            'karma',
             'clean',
+            'test',
             'sass',
             'autoprefixer',
             'concat',
@@ -327,6 +337,7 @@ module.exports = function ( grunt ) {
             'cssmin',
             'uglify',
             'docs',
-            'sloc'
+            'sloc',
+            'coveralls'
         ] );
     };
