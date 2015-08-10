@@ -9,4 +9,5 @@ after_success: ./publish.sh
 env:
   global:
     - GH_REF: github.com/zeusjs/utils.git
-    - secure: CwHzojD66Mgio220y39aLzEuZ/v4/evU/KBmDMb2S+pyck6zpZGsh/XHZTNw1zXw4DwAczwT+nli7xhy24t3FMtDE4zr1qRqxPPtxFkpLPI5NQX1P4YdJyUan1NX5iimiEeBEnT5QC+bzF9UjNE61ESwsMJi/v7Yqa58CWrtPCw=
+    - secure: xoxG8T/iW/g3bzng43XPEfrMGbM3meHhmQrre0emt32ZF4O0MHA9P877s6rRNcwoAflBmCcgtbqYWoP+sfLwiBMQ4Dh6fxjKq1aGspBxYqakMnMXzdHedeWzcu1NlNsj8Doqvr1JhqjhwxQVgMSpTtYwan8MAeIF/XDjsXeAW/w=
+    - secure: adXTQtY8Jru+zgcjaPDsNXhhZ9GxHP4B51mLHPbQtAH+riE5HLfwjOYGLaR3q+8GdVsrrfw22F7x2WVUWqEBQ3dlr9+UrSiOb7sxM7HMnlu4Zb1igptMkFh/R815CmTSwMwNd/Y1MxoJR+Z9+G378oJH+zUQzSLXM4KN0cUmJYg=
