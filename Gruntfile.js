@@ -348,6 +348,7 @@ module.exports = function ( grunt ) {
             'uglify',
             'docs',
             'sloc',
-            'coveralls'
+            'coveralls',
+            'codeclimate'
         ] );
     };
