@@ -6,7 +6,7 @@ before_script:
   - npm install
 script: grunt build
 after_success:
-    - codeclimate-test-reporter < ./gen/coverage/report/lcov.info
+    - codeclimate-test-reporter < ./.gen/coverage/report/lcov.info
     - ./publish.sh
 env:
   global:
