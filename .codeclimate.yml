@@ -3,9 +3,11 @@ languages:
   JavaScript: true
 
 exclude_paths:
-    - "dist/"
-    - "docs/"
-    - ".gen/"
-    - ".tmp/"
-    - "node_modules"
-    - "externs"
+    - "dist/*"
+    - "docs/*"
+    - ".gen/*"
+    - ".tmp/*"
+    - "node_modules/*"
+    - "externs/*"
+    - "Gruntfile.js"
+    - "karma.conf.js"
