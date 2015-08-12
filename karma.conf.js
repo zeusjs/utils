@@ -98,7 +98,8 @@ module.exports = function ( config ) {
 
         coverageReporter: {
             type: 'lcov',
-            dir: '.gen/coverage'
+            dir: '.gen/coverage',
+            subdir: 'report'
         }
     } );
 };

@@ -6,6 +6,8 @@ module.exports = function ( grunt ) {
     require( 'load-grunt-tasks' )( grunt );
     require( 'time-grunt' )( grunt );
 
+    var CC_TOKEN = process.env.CODECLIMATE_REPO_TOKEN;
+
     // Define the configuration for all the tasks
     grunt.initConfig( {
 
@@ -275,6 +277,14 @@ module.exports = function ( grunt ) {
                 }
             },
 
+            codeclimate: {
+                main: {
+                  options: {
+                        file: '.gen/coverage/report/lcov.info',
+                        token: CC_TOKEN
+                    }
+                }
+            },
 
             connect: {
                 options: {
@@ -338,6 +348,7 @@ module.exports = function ( grunt ) {
             'uglify',
             'docs',
             'sloc',
-            'coveralls'
+            'coveralls',
+            'codeclimate'
         ] );
     };
