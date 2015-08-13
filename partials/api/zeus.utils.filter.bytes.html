@@ -1,0 +1,40 @@
+<a href="https://github.com/zeusjs/utils/edit/master/src/js/filters/bytes.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/zeusjs/utils/blob/6526513/src/js/filters/bytes.js#L38" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">bytes</code>
+<div><span class="hint">filter in module <code ng:non-bindable="">zeus.utils</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="zeus-utils-filter-page zeus-utils-filter-bytes-page"><p>Converts a number bytes to a string kilo/mega/giga/tera or peta bytes</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><h3 id="usage_in-html-template-binding">In HTML Template Binding</h3>
+<div class="in-html-template-binding"><code ng:non-bindable=""><span>{{</span> bytes_expression | bytes[:precision] <span>}}</span></code>
+</div>
+<h3 id="usage_in-javascript">In JavaScript</h3>
+<div class="in-javascript"><code ng:non-bindable="">$filter('bytes')(size[, precision])</code>
+</div>
+<h4 id="usage_in-javascript_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>size</td><td><a href="" class="label type-hint type-hint-object"> number </a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-bytes-page"><p>Size in bytes</p>
+</div></td></tr><tr><td>precision <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object"> number</a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-bytes-page"><p>Number of decimals to round off to</p>
+</div></td></tr></tbody></table><h4 id="usage_in-javascript_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object"> string </a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-bytes-page"><p>Bytes represented as kilo/mega/giga/tera or peta bytes</p>
+</div></td></tr></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="zeus-utils-filter-page zeus-utils-filter-bytes-page"><h4 id="example_source">Source</h4>
+<div source-edit="zeus.utils" source-edit-deps="angular.js" source-edit-html="index.html-0" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-0" ng-html-wrap-loaded="zeus.utils angular.js"></pre>
+<script type="text/ng-template" id="index.html-0">
+    <ul>
+        <li> 23 bytes = <b>{{ 23 | bytes }}</b> </li>
+        <li> 1024 bytes = <b>{{ 1024 | bytes }}</b> </li>
+        <li> 1245237 bytes = <b>{{ 1245237 | bytes }}</b> </li>
+        <li> 9899956 bytes = <b>{{ 9899956 | bytes }}</b> </li>
+        <li> 5678753190 bytes = <b>{{ 5678753190 | bytes }}</b> </li>
+        <li> 3212798762 bytes = <b>{{ 3212798762 | bytes }}</b> </li>
+        <li> 6743129076349 bytes = <b>{{ 6743129076349 | bytes }}</b> </li>
+    </ul>
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="zeus.utils" ng-set-html="index.html-0" ng-eval-javascript=""></div>
+</div></div>
+</div>

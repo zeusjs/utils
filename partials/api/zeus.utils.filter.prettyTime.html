@@ -1,0 +1,36 @@
+<a href="https://github.com/zeusjs/utils/edit/master/src/js/filters/pretty_time.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/zeusjs/utils/blob/6526513/src/js/filters/pretty_time.js#L33" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prettyTime</code>
+<div><span class="hint">filter in module <code ng:non-bindable="">zeus.utils</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="zeus-utils-filter-page zeus-utils-filter-prettytime-page"><p>Converts a date represented by numeric epoch to a human readable string.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><h3 id="usage_in-html-template-binding">In HTML Template Binding</h3>
+<div class="in-html-template-binding"><code ng:non-bindable=""><span>{{</span> prettyTime_expression | prettyTime <span>}}</span></code>
+</div>
+<h3 id="usage_in-javascript">In JavaScript</h3>
+<div class="in-javascript"><code ng:non-bindable="">$filter('prettyTime')(timeInMillis)</code>
+</div>
+<h4 id="usage_in-javascript_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>timeInMillis</td><td><a href="" class="label type-hint type-hint-object"> number </a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-prettytime-page"><p>Date as numeric epoch( in milliseconds )</p>
+</div></td></tr></tbody></table><h4 id="usage_in-javascript_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object"> string </a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-prettytime-page"><p>The date as a human readable string</p>
+</div></td></tr></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="zeus-utils-filter-page zeus-utils-filter-prettytime-page"><h4 id="example_source">Source</h4>
+<div source-edit="zeus.utils" source-edit-deps="angular.js" source-edit-html="index.html-2" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-2" ng-html-wrap-loaded="zeus.utils angular.js"></pre>
+<script type="text/ng-template" id="index.html-2">
+    <ul>
+        <li> {{ 1407919200 | prettyTime }} </li>
+        <li> {{ 158291 | prettyTime }} </li>
+        <li> {{ 1397828100000 | prettyTime }} </li>
+        <li> {{ 1407919200000 | prettyTime }} </li>
+    </ul>
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="zeus.utils" ng-set-html="index.html-2" ng-eval-javascript=""></div>
+</div></div>
+</div>

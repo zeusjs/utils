@@ -1,0 +1,39 @@
+<a href="https://github.com/zeusjs/utils/edit/master/src/js/filters/time_ago.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/zeusjs/utils/blob/6526513/src/js/filters/time_ago.js#L36" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">timeAgo</code>
+<div><span class="hint">filter in module <code ng:non-bindable="">zeus.utils</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="zeus-utils-filter-page zeus-utils-filter-timeago-page"><p>Provides human readable string representing the time elapsed
+since the event occurred.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><h3 id="usage_in-html-template-binding">In HTML Template Binding</h3>
+<div class="in-html-template-binding"><code ng:non-bindable=""><span>{{</span> timeAgo_expression | timeAgo[:refTime] <span>}}</span></code>
+</div>
+<h3 id="usage_in-javascript">In JavaScript</h3>
+<div class="in-javascript"><code ng:non-bindable="">$filter('timeAgo')(eventTime[, refTime])</code>
+</div>
+<h4 id="usage_in-javascript_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>eventTime</td><td><a href="" class="label type-hint type-hint-object"> number </a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-timeago-page"><p>Time when event occurred in millisec</p>
+</div></td></tr><tr><td>refTime <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object"> number</a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-timeago-page"><p>Reference time</p>
+</div></td></tr></tbody></table><h4 id="usage_in-javascript_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object"> string </a></td><td><div class="zeus-utils-filter-page zeus-utils-filter-timeago-page"><p>Human readable format of the event time</p>
+</div></td></tr></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="zeus-utils-filter-page zeus-utils-filter-timeago-page"><h4 id="example_source">Source</h4>
+<div source-edit="zeus.utils" source-edit-deps="angular.js" source-edit-html="index.html-3" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-3" ng-html-wrap-loaded="zeus.utils angular.js"></pre>
+<script type="text/ng-template" id="index.html-3">
+    <ul>
+        <li> {{ 1435720957000 | timeAgo:1435924487865 }} </li>
+        <li> {{ 1432351357016 | timeAgo:1435924487865 }} </li>
+        <li> {{ 1435872647865 | timeAgo:1435924487865 }} </li>
+        <li> {{ 1401247357016 | timeAgo:1435924487865 }} </li>
+        <li> {{ 1435807357016 | timeAgo:1435924487865 }} </li>
+    </ul>
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="zeus.utils" ng-set-html="index.html-3" ng-eval-javascript=""></div>
+</div></div>
+</div>
